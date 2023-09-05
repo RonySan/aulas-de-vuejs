@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diretivas</title>
+  </head>
+
+  <body>
+    <!-- <div id="app"> -->
+    <!-- :v-show aceita valores bulian true ou
+                false serve para esconder oou  mostrar 
+                div ou conteudo como display none -->
+    <!-- <div v-show="showTitle">
+            <h1>Diretivas</h1>
+        </div> -->
+    <!-- v-if aceita valores bulian true ou -->
+    <!-- false serve para excluir o elemento total -->
+    <!-- <div V-if="showTitle">
+            <h1>caiu no if </h1>
+        </div>
+        
+        <div v-else>
+            <h1>caiu no else</h1>
+        </div>
+        <div v-else-if="showTitle2">
+            <h1>curso top
+            
+            </h1>
+            
+        </div> -->
+    <!-- </div> -->
+    <div id="app">
+      <div v-for="(movie, index) in movies">
+        {{ index }} - {{ movie.name }} ({{ movie.release_date }}) {{ movie.name }}
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            // title: 'Olaaa',
+            // conteudo:'mdçamdçadçgmad',
+            // showTitle:true,
+            // showTitle2:true,
+            movies: [
+              {
+                name: 'batman',
+                release_date: '01/01/2010',
+              },
+
+              {
+                name: 'manin',
+                release_date: '05/01/2010',
+              },
+
+              {
+                name: 'sormani',
+                release_date: '06/01/2010',
+              },
+            ],
+
+          }
+        },
+
+      }).mount("#app")
+    </script>
+  </body>
+</html>
